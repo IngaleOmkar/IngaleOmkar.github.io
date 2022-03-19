@@ -1,33 +1,35 @@
-Hyperspace by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+<p align="center">
+  <h1 align="center">Welcome to <a href="https://github.com/IngaleOmkar">Omkar Ingale</a>'s Profile 👋</h1>
+</p>
+<p>I am a student at Nanyang Technological University, Singapore</p>
+<ul>
+  <li>👋 Hi, I’m @IngaleOmkar</li>
+  <li>❤️ I love learning new things and Programming in Python and Java.</li>
+  <li>🧐 Portfolio Website, https://IngaleOmkar.github.io</li>
+</ul>
 
+#### A little more about me
+```javascript
+const omkar = {
+    pronouns: "He" | "Him",
+    code: ["Javascript", "Python", "HTML", "CSS", "C/C++", "Java"],
+    university: "NTU Singapore",
+    username: "IngaleOmkar",
+}
+```
+#### Stats
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=IngaleOmkar&show_icons=true&include_all_commits=true&theme=onedark" alt="Omkar's github stats" />
+</a>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=IngaleOmkar&layout=compact&theme=onedark" />
+</a>
+<br />
+<br />
+<p align="center">
+  <img align="center" height="150em" src="https://github-readme-streak-stats.herokuapp.com/?user=IngaleOmkar&theme=onedark" alt="IngaleOmkar" />
+</p>
 
-So I've had the wireframe for this particular design kicking around for some time, but with all
-the other interesting (and in some cases, semi-secret) projects I've been working on it took me
-a little while to get to actually designing and coding it. Fortunately, things have eased up
-enough for me to finaly get around to it, so I'm happy to introduce Hyperspace: a fun, blocky,
-one-page design with a lot of color, a bit of animation, and an additional "generic" page template
-(because hey, even one-page sites usually need an interior page or two). Hope you dig it :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+#### Contribution Graph
+[![Omkar's github activity graph](https://activity-graph.herokuapp.com/graph?username=IngaleOmkar&theme=react-dark)](https://github.com/IngaleOmkar/github-readme-activity-graph)
