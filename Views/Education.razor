@@ -1,0 +1,31 @@
+﻿@page "/education"
+@inject PersonlWebsite.ViewModels.EducationViewModel _educationViewModel;
+
+
+<MudCarousel Style="height: 100%" ItemsSource="@_educationViewModel.educationInstitutions" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true">
+    <ItemTemplate>
+        <MudCard Style="height: 100%">
+            <MudGrid Class="ml-5 mr-5">
+                <MudItem xs="12" sm="3" Style="display: flex; justify-content: center; align-items: center;">
+                    <MudImage Src="@context.ImagePath" Height="250" Alt="@context.Name" Elevation="25" Class="rounded-lg ma-4" />
+                </MudItem>
+                <MudItem xs="12" sm="1"/>
+                <MudItem xs="12" sm="8">
+                    <MudGrid>
+                        <MudElement xs="12" sm="9">
+                            <MudText Style="font-size: 20px; color:white; font-weight: bold">@context.Name</MudText>
+                        </MudElement>
+                        <MudElement xs="12" sm="3">
+                            <MudText Style="font-size: 20px; font-weight: bold">@context.Location</MudText>
+                        </MudElement>
+                    </MudGrid>
+                </MudItem>
+            </MudGrid>
+        </MudCard>
+    </ItemTemplate>
+</MudCarousel>
+
+
+@code {
+
+}
