@@ -1,0 +1,26 @@
+﻿@page "/projects"
+@inject PersonlWebsite.ViewModels.ProjectsViewModel _projectsViewModel;
+@using PersonlWebsite.Models;
+
+
+<MudPaper Style="max-height: 100%; overflow-y: scroll">
+    <MudText Align="Align.Center" Style="font-size: 40px; margin-top: 5px">
+        <b>Projects</b>
+    </MudText>
+    <MudList Clickable="true">
+        @foreach (Models.Project project in _projectsViewModel.Projects)
+        {
+            <MudListItem Icon="@Icons.Material.Filled.Code" IconColor="Color.Success" Text="@project.Name" InitiallyExpanded="false">
+                <NestedList>
+                    <MudListItem>
+                        <MudText>@project.Description</MudText>
+                    </MudListItem>
+                </NestedList>
+            </MudListItem>
+        }
+    </MudList>
+</MudPaper>
+
+@code {
+}
+
