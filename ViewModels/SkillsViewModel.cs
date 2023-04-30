@@ -47,6 +47,18 @@ namespace PersonlWebsite.ViewModels
                 Name = "C#"
             });
             Skills.Add(new Skill()
+            {
+                Name = "Unit Testing"
+            });
+            Skills.Add(new Skill()
+            {
+                Name = "NUnit Framework"
+            });
+            Skills.Add(new Skill()
+            {
+                Name = "Prism Library"
+            });
+            Skills.Add(new Skill()
 			{
 				Name= "Java"
             });
