@@ -1,0 +1,79 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="@_mudTheme"/>
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudDrawer @bind-Open="@open" Fixed="true" Variant="@DrawerVariant.Mini" Elevation="1">
+        <MudDrawerHeader Style="display: flex; justify-content: center">
+            @if (open)
+            {
+                <MudText Style="font-size: 20px" Class="mt-5">
+                    Omkar Ingale
+                </MudText>
+            }
+            else
+            {
+                <MudAvatar Color="Color.Primary" Style="margin-left: 2px">OI</MudAvatar>
+            }
+        </MudDrawerHeader>
+        <NavMenu/>
+        <MudIconButton Class="mt-auto ml-auto" Icon="@_navigationIcon" Color="Color.Inherit" OnClick="@(() => ToggleDrawer() )"/>
+    </MudDrawer>
+    <MudAppBar Fixed="false" Elevation="1">
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Href="https://github.com/IngaleOmkar"/>
+        <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Inherit" Href="https://www.linkedin.com/in/omkar-ingale-sg/"/>
+    </MudAppBar>
+    <MudMainContent Style="height: calc(100vh - 2 * var(--mud-appbar-height));">
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Style="overflow: hidden; height: 100%">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+
+    bool open = false;
+
+    void ToggleDrawer()
+    {
+        open = !open;
+    }
+
+    public string _navigationIcon
+    {
+        get
+        {
+            return open ? @Icons.Filled.ArrowBack : @Icons.Filled.ArrowForward;
+        }
+    }
+
+    public MudTheme _mudTheme = new()
+    {
+        Palette = new()
+        {
+            Black = "#272C34",
+            Background = "#1E2125",
+            Surface = "#282C34",
+            AppbarBackground = "#21252B",
+            DrawerBackground = "#21252B",
+            DrawerText = "rgba(255, 255, 255, 0.70)",
+            Success = "#8BC34A",
+            SuccessContrastText = "#21252B",
+            Warning = "#FFC107",
+            WarningContrastText = "#21252B",
+            Info = "#2196F3",
+            InfoContrastText = "#21252B",
+            TextPrimary = "rgba(255, 255, 255, 0.87)",
+            TextSecondary = "rgba(255, 255, 255, 0.60)",
+            Primary = "#2196F3",
+            Secondary = "#f48fb1",
+            AppbarText = "rgba(255, 255, 255, 0.87)",
+            ActionDefault = "#FFF",
+            ActionDisabled = "rgba(255, 255, 255, 0.26)",
+            Divider = "rgba(255, 255, 255, 0.12)",
+        }
+    };
+}

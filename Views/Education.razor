@@ -1,0 +1,22 @@
+﻿@page "/education"
+@inject PersonlWebsite.ViewModels.EducationViewModel _educationViewModel;
+
+
+<MudCarousel Style="height: 100%;" ItemsSource="@_educationViewModel.educationInstitutions" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true">
+    <ItemTemplate>
+        <MudElement HtmlTag="div" Style="margin: 5px 5px 5px 5px; height: 100%">
+            <MudCard Style="height: 100%">
+                <MudText Style="font-size: 40px; color:white; font-weight: bold; padding-top: 5px" Align="Align.Center">@context.Name</MudText>
+                <MudText Style="font-size: 20px; color:white; font-weight: bold; padding-top: 5px" Align="Align.Center">
+                    @context.Degree <MudIcon Icon="@Icons.Material.Sharp.LocationOn" /> <i>@context.Location</i>
+                </MudText>
+                <MudText Align="Align.Center" Style="margin-bottom: 5px">
+                    <MudImage Src="@context.ImagePath" Style="width: 75%; height: 40%; margin-bottom: 15px" Alt="@context.Name" Elevation="25" Class="rounded-lg ma-4" />
+                </MudText>
+            </MudCard>
+        </MudElement>
+    </ItemTemplate>
+</MudCarousel>
+
+@code {
+}

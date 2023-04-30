@@ -1,0 +1,42 @@
+﻿@page "/experience"
+@inject PersonlWebsite.ViewModels.ExperienceViewModel _experienceViewModel;
+@using PersonlWebsite.Models;
+
+<MudCarousel Style="height: 100%;" ItemsSource="@_experienceViewModel.Experiences" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="true">
+    <ItemTemplate>
+        <MudElement HtmlTag="div" Style="height: 100%; ">
+            <MudCard Style="height: 100%;">
+                <MudText Style="font-size: 40px; color:white; font-weight: bold; padding-top: 5px; margin-left: 30px" Align="Align.Center">@context.Name</MudText>
+                <MudGrid Style="width: 100%; padding-left: 30px; padding-right: 30px">
+                    <MudElement xs="12" sm="6" Style="width: 50%">
+                        <MudText Style="font-size: 20px; color:white; font-weight: bold; padding-top: 5px; padding-left: 30px" Align="Align.Left">
+                            @context.Position
+                        </MudText>
+                    </MudElement>
+                    <MudElement xs="12" sm="6" Style="width: 50%">
+                        <MudText Style="font-size: 20px; color: white; font-weight: bold; padding-top: 5px; padding-right: 30px" Align="Align.Right">
+                            <i>@context.Duration</i>
+                        </MudText>
+                    </MudElement>
+                </MudGrid>
+                <MudText Align="Align.Left" Style="padding-top: 30px; padding-right: 30px; padding-left: 30px">
+                    @context.Description
+                </MudText>
+                @if (context.SkillsGained != null)
+                 {
+                    <MudText Align="Align.Justify" Style="padding-left: 30px; padding-top: 20px">
+                        Skills Gained:
+                        @foreach (Skill skill in context.SkillsGained)
+                        {
+                            <MudChip Color="Color.Success">@skill.Name</MudChip>
+                        }
+                    </MudText>
+                 }
+            </MudCard>
+        </MudElement>
+    </ItemTemplate>
+</MudCarousel>
+
+@code {
+}
+

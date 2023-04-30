@@ -1,0 +1,19 @@
+﻿@page "/skills"
+@inject PersonlWebsite.ViewModels.SkillsViewModel _skillsViewModel;
+@using PersonlWebsite.Models;
+
+
+<MudPaper Style="max-height: 100%; overflow-y: scroll">
+    <MudText Align="Align.Center" Style="font-size: 40px; margin-top: 5px">
+        <b>Skills</b>
+    </MudText>
+    <MudList Clickable="true">
+        @foreach (Models.Skill skill in _skillsViewModel.Skills)
+        {
+            <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconColor="Color.Success" Text="@skill.Name" InitiallyExpanded="false" />
+        }
+    </MudList>
+</MudPaper>
+
+@code {
+}

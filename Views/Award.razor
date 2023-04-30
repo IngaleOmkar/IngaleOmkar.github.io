@@ -1,0 +1,26 @@
+﻿@page "/awards"
+@inject PersonlWebsite.ViewModels.AwardsViewModel _awardsViewModel;
+@using PersonlWebsite.Models;
+
+
+<MudPaper Style="max-height: 100%; overflow-y: scroll">
+    <MudText Align="Align.Center" Style="font-size: 40px; margin-top: 5px">
+        <b>Awards and Achievements</b>
+    </MudText>
+    <MudList Clickable="true">
+        @foreach (Models.Award award in _awardsViewModel.Awards)
+         {
+            <MudListItem Icon="@Icons.Material.Filled.Verified" IconColor="Color.Success" Text="@award.Name" InitiallyExpanded="false">
+                <NestedList>
+                    <MudListItem>
+                        <MudText>@award.Description</MudText>
+                    </MudListItem>
+                </NestedList>
+            </MudListItem>
+         }
+    </MudList>
+</MudPaper>
+
+@code {
+}
+

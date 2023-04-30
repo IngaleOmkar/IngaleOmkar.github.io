@@ -1,0 +1,42 @@
+﻿@page "/certificates"
+@inject PersonlWebsite.ViewModels.CertificateViewModel _certificateViewModel;
+@using PersonlWebsite.Models;
+
+
+<MudPaper Style="max-height: 100%; overflow-y: scroll">
+    <MudText Align="Align.Center" Style="font-size: 40px; margin-top: 5px">
+        <b>Certifications and Programs Attended</b>
+    </MudText>
+    <MudList Clickable="true">
+        @foreach (Models.Certificate certificate in _certificateViewModel.Certificates)
+        {
+            <MudListItem Icon="@Icons.Material.Filled.Code" IconColor="Color.Success" Text="@certificate.Name" InitiallyExpanded="false">
+                <NestedList>
+                    <MudListItem>
+                        <MudText>@certificate.Description</MudText>
+                        @if (certificate.PDFName != null)
+                        {
+                            if (certificate.PDFName.Contains("/"))
+                            {
+                                <MudButton Href=@("/Certificates/" + certificate.PDFName.Split("/")[0])>View Certificate <MudIcon Icon="@Icons.Material.Sharp.NorthEast" /></MudButton>
+                                <MudButton Href=@("/Certificates/" + certificate.PDFName.Split("/")[1])>View Certificate <MudIcon Icon="@Icons.Material.Sharp.NorthEast" /></MudButton>
+                            }
+                            else
+                            {
+                                <MudButton Href=@("/Certificates/" + certificate.PDFName)>View Certificate <MudIcon Icon="@Icons.Material.Sharp.NorthEast" /></MudButton>
+                            }
+                        }
+                        @if (certificate.WebLink != null)
+                        {
+                            <MudButton Href=@(certificate.WebLink)>View Certificate <MudIcon Icon="@Icons.Material.Sharp.NorthEast" /></MudButton>
+                        }
+                    </MudListItem>
+                </NestedList>
+            </MudListItem>
+        }
+    </MudList>
+</MudPaper>
+
+@code {
+}
+
