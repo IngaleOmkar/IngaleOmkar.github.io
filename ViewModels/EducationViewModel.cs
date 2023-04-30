@@ -35,7 +35,7 @@ namespace PersonlWebsite.ViewModels
             });
             educationInstitutions.Add(new EducationInstitution()
             {
-                ImagePath = "/images/GIIS",
+                ImagePath = "/images/GIIS.jpeg",
                 Name = "Global Indian International School, Singapore",
                 Location = "Singapore",
                 Degree = "International Baccalaureate Diploma Programme",
