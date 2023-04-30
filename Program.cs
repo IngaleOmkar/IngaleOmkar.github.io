@@ -14,6 +14,7 @@ builder.Services
     .AddScoped<PersonlWebsite.ViewModels.AwardsViewModel>()
     .AddScoped<PersonlWebsite.ViewModels.ProjectsViewModel>()
     .AddScoped<PersonlWebsite.ViewModels.CertificateViewModel>()
+    .AddScoped<PersonlWebsite.ViewModels.SkillsViewModel>()
     .AddScoped<PersonlWebsite.ViewModels.EducationViewModel>();
 
 builder.Services.AddMudServices();
