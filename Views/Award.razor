@@ -10,7 +10,7 @@
     <MudList Clickable="true">
         @foreach (Models.Award award in _awardsViewModel.Awards)
          {
-            <MudListItem Icon="@Icons.Material.Filled.Verified" IconColor="Color.Success" Text="@award.Name" InitiallyExpanded="true">
+            <MudListItem Icon="@Icons.Material.Filled.Verified" IconColor="Color.Success" Text="@award.Name" InitiallyExpanded="false">
                 <NestedList>
                     <MudListItem>
                         <MudText>@award.Description</MudText>
